@@ -29,6 +29,8 @@ function swap(array, smaller, larger, idx1, idx2){
   array[idx2] = larger;
 }
 
+// returns true if first element is greater
+// returns false if second is greater
 function compare(el1, el2){
   return el1>el2;
 }
