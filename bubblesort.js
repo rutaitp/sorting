@@ -1,6 +1,7 @@
 function bubbleSort(array){
   //base case
   ///...to come
+  let arrayHasChanged = false;
 
   //loop through a given array
   for(let i=0; i<array.length-1; i++){
@@ -8,9 +9,19 @@ function bubbleSort(array){
     if (compare(array[i], array[i+1])) {
       //if first is larger than second, swap
       swap(array, array[i+1], array[i], i, i+1);
+      arrayHasChanged = true;
     }
   }
-  return array;
+
+  //if we passed through array and no changes were needed
+  //it means it was sorted
+  //so return that array
+  if (!arrayHasChanged) {
+    return array;
+  }
+  //otherwise keep sorting the array
+  return bubbleSort(array);
+
 }
 
 function swap(array, smaller, larger, idx1, idx2){

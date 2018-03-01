@@ -8,21 +8,25 @@ describe("Bubble Sort", function(){
 
   it("handles and empty array", function(){
     expect(bubbleSort([])).toEqual([]);
+    expect(window.bubbleSort.calls.count()).toEqual(1);
     expect(window.swap.calls.count()).toEqual(0);
     expect(window.compare.calls.count()).toEqual(0);
   });
   it("handles an array with one item", function(){
     expect(bubbleSort([1])).toEqual([1]);
+    expect(window.bubbleSort.calls.count()).toEqual(1);
     expect(window.swap.calls.count()).toEqual(0);
     expect(window.compare.calls.count()).toEqual(0);
   });
   it("handles an array with multiple items", function(){
     expect(bubbleSort([2,1])).toEqual([1,2]);
+    expect(window.bubbleSort.calls.count()).toEqual(2);
     expect(window.swap.calls.count()).toEqual(1);
-    expect(window.compare.calls.count()).toEqual(1);
+    expect(window.compare.calls.count()).toEqual(2);
   });
   it("handles an array with many items", function(){
     expect(bubbleSort([1,2,3,4])).toEqual([1,2,3,4]);
+    expect(window.bubbleSort.calls.count()).toEqual(1);
     expect(window.swap.calls.count()).toEqual(0);
     expect(window.compare.calls.count()).toEqual(3);
   });
