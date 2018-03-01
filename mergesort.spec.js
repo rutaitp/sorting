@@ -16,3 +16,5 @@ describe('merge sort function', function() {
   });
 
 });
+
+//finish writing tests

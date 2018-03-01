@@ -1,12 +1,4 @@
-function split(wholeArray) {
-
-  let midIndex = Math.round(wholeArray.length / 2);
-
-  let firstHalf = wholeArray.slice(0, midIndex);
-  let secondHalf = wholeArray.slice(midIndex);
-
-  return [firstHalf, secondHalf];
-}
+'use strict'
 
 // function mergeSort(array) {
 
@@ -18,6 +10,17 @@ function split(wholeArray) {
 
 // }
 
+function split(wholeArray) {
+
+  let midIndex = wholeArray.length / 2;
+
+  let firstHalf = wholeArray.slice(0, midIndex);
+  let secondHalf = wholeArray.slice(midIndex);
+
+  return [firstHalf, secondHalf];
+}
+
+//rename to firstHalf, secondHalf
 function merge(arr1, arr2) {
   let shorterArrayLength = arr1.length < arr2.length ? arr1.length : arr2.length;
 

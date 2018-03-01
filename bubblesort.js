@@ -1,3 +1,5 @@
+'use strict'
+
 function bubbleSort(array){
   //base case
   ///...to come
@@ -24,13 +26,21 @@ function bubbleSort(array){
 
 }
 
+//change to solution code
 function swap(array, smaller, larger, idx1, idx2){
   array[idx1] = smaller;
   array[idx2] = larger;
 }
 
+//change to solution code
 // returns true if first element is greater
 // returns false if second is greater
 function compare(el1, el2){
   return el1>el2;
 }
+
+/*
+1. change to solution code swap, compare
+2. write more it statements
+*/
+
